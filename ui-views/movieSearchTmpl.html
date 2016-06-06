@@ -1,0 +1,32 @@
+<div class="search-area">
+
+<p>
+    Start by typing the title of a Movie
+</p>
+
+<input id="search-bar" ng-model='searchQ' type="text" name="search" ng-keyup="enterKeyM($event)" placeholder=" Movie title">
+<input id="search-button" ng-click="getMovieID()"  type="button" name="submit" value="Submit">
+
+</div>
+
+<loading-dir></loading-dir>
+
+<section class="results" >
+
+<h2>{{noInfo}}</h2>
+
+
+
+
+<modal-dir movie="selMovie"></modal-dir>
+
+
+<div class='results-area'>
+<!-- MOVIE SEARCH -->
+<div ng-repeat="movie in movieInfo" id ='search-content'>
+  <img class="hvr-grow" ng-click="openModal('modal-dir', '70vh', '80%', movie) ; getMovieSources(movie.id)" ng-src='{{movie.poster_240x342}}' />
+</div>
+
+</section>
+
+<footer-dir></footer-dir>

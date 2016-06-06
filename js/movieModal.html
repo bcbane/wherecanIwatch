@@ -1,0 +1,32 @@
+<div class="modal-display">
+  <div id = "close-modal" class="icon-times" ng-click="closeModal()"></div>
+
+    <section class="modal-left">
+
+        <img id="movie-pic" ng-src='{{movie.poster_240x342}}' />
+        <h2>{{movie.title}}</h2>
+
+        <!-- {{movie.rating}} -->
+
+        <div class="source-area">
+
+            <div ng-repeat="subSource in movie.subSources">
+                <p>{{subSource.display_name}}</p>
+            </div>
+            <div ng-repeat="paySource in movie.paySources">
+                <p>{{paySource.display_name}}</p>
+            </div>
+        </div>
+
+      </section>
+
+      <section class="modal-right">
+
+
+        <p>Description</p>
+        <p>{{movie.ext.data.overview}} - {{movie.ext.data.overview}}{{movie.ext.data.overview}}</p>
+
+      </section>
+
+
+</div>

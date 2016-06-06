@@ -1,0 +1,29 @@
+<div class="modal-display">
+    <div id = "close-modal" class="icon-times" ng-click="closeModal()"></div>
+
+
+    <section class="modal-left">
+
+        <img ng-src='{{show.artwork_304x171}}' />
+        <h2>{{show.title}}</h2>
+
+        <div class="source-area">
+
+            <div ng-repeat="source in show.sources">
+                <p>{{source.display_name}}</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="modal-right">
+        <p>Description</p>
+        <p>{{show.info.data.rating}} - {{show.info.data.overview}}</p>
+
+    </section>
+
+
+
+
+</div>

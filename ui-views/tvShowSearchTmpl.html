@@ -1,0 +1,42 @@
+<div class="search-area">
+
+    <p>
+        Start by typing the title of a TV Show
+    </p>
+
+    <input id="search-bar" ng-model='searchQ' type="text" name="search" ng-keyup="enterKeyT($event)" placeholder=" TV show title">
+    <input id="search-button" ng-click="getShowID()"  type="button" name="submit" value="Submit">
+
+</div>
+
+<!-- <div class="loading-img" ng-if="loading">
+  <div class="cssload-thecube">
+    <div class="cssload-cube cssload-c1"></div>
+    <div class="cssload-cube cssload-c2"></div>
+    <div class="cssload-cube cssload-c4"></div>
+    <div class="cssload-cube cssload-c3"></div>
+  </div>
+</div> -->
+<loading-dir></loading-dir>
+
+
+<section class="results" >
+
+<h2>{{noInfo}}</h2>
+
+<!-- <div id="modal-curtain" ng-click="closeModal()"></div> -->
+
+<tv-modal-dir show="selShow"></tv-modal-dir>
+
+<div class='results-area'>
+
+<!-- TV SHOW SEARCH -->
+<div ng-repeat="show in showInfo" id ='search-content'>
+  <img class="hvr-grow" ng-click="openModal('tv-modal-dir', '70vh', '80%', show) ; getShowSources(show.id); getShowInfo(show.id)" ng-src='{{show.artwork_304x171}}' />
+
+</div>
+</div>
+
+</section>
+
+<footer-dir></footer-dir>
