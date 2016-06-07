@@ -26,7 +26,16 @@
         <a ui-sref="home"><h1>WHERE CAN I WAT.<span>CH</span></h1></a>
 
         <div class="nav-contain">
-            <div class="hamburger icon-bars"></div>
+            <div class="hamburger icon-bars" ng-click="dropClick = !dropClick"></div>
+
+            <ul class="dropdown" ng-if = "dropClick">
+              <li ui-sref = "home" class="hvr-grow">Home</li>
+              <li ui-sref = "movieSearcher" class="hvr-grow">Movie Search</li>
+              <li ui-sref = "tvSearcher" class="hvr-grow">TV Search</li>
+              <li ui-sref = "terms" class="hvr-grow">Terms of Use</li>
+              <li ui-sref = "privacy" class="hvr-grow">Privacy</li>
+            </ul>
+
         </div>
 
 

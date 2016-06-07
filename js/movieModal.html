@@ -2,12 +2,18 @@
   <div id = "close-modal" class="icon-times" ng-click="closeModal()"></div>
 
     <section class="modal-left">
-
+        <h2 id="title" >{{movie.title}}</h2>
         <img id="movie-pic" ng-src='{{movie.poster_240x342}}' />
-        <h2>{{movie.title}}</h2>
 
-        <!-- {{movie.rating}} -->
 
+      </section>
+
+      <section class="modal-right">
+        <div class="movie-desc">
+        <h2>Description</h2>
+        <p>Rated: {{movie.ext.data.rating}} - {{movie.ext.data.overview}}</p>
+
+        <h2>Currently Streaming At:</h2>
         <div class="source-area">
 
             <div ng-repeat="subSource in movie.subSources">
@@ -17,15 +23,7 @@
                 <p>{{paySource.display_name}}</p>
             </div>
         </div>
-
-      </section>
-
-      <section class="modal-right">
-
-
-        <p>Description</p>
-        <p>{{movie.ext.data.overview}} - {{movie.ext.data.overview}}{{movie.ext.data.overview}}</p>
-
+      </div>
       </section>
 
 

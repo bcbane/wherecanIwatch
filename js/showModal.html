@@ -3,10 +3,21 @@
 
 
     <section class="modal-left">
+        <h2 id="title">{{show.title}}</h2>
+      
+        <img id="show-pic" ng-src='{{show.artwork_304x171}}' />
 
-        <img ng-src='{{show.artwork_304x171}}' />
-        <h2>{{show.title}}</h2>
 
+
+
+    </section>
+
+    <section class="modal-right">
+      <div class="show-desc">
+        <h2>Description</h2>
+        <p>Rated: {{show.info.data.rating}} - {{show.info.data.overview}}</p>
+
+        <h2>Currently Streaming At:</h2>
         <div class="source-area">
 
             <div ng-repeat="source in show.sources">
@@ -14,13 +25,7 @@
             </div>
 
         </div>
-
-    </section>
-
-    <section class="modal-right">
-        <p>Description</p>
-        <p>{{show.info.data.rating}} - {{show.info.data.overview}}</p>
-
+      </div>
     </section>
 
 
