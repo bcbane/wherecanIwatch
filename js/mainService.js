@@ -99,7 +99,7 @@ angular.module('app').service("movieStatsService", function($http, $q) {
         method: 'GET',
 
         //get source data
-        url:'https://api-public.guidebox.com/v1.43/US/Uj0hrgTn1bACZvIlxuhkS53ui13NTi/show/'+id
+        url:'https://api-public.guidebox.com/v1.43/US/rKf2rpVzASvF51E4Nt2IHEBrg4HcFA17/show/'+id
 
       }).then(function(response){
           deferred.resolve(response);
