@@ -6,6 +6,7 @@ angular.module('app').service("movieStatsService", function($http, $q) {
 
       var deferred = $q.defer();
 
+
       $http({
         method: 'GET',
           //get movie ID.
